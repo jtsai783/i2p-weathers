@@ -22,6 +22,7 @@ function App() {
       {/*<div className="text-3xl font-bold underline">
         Hello world!
       </div>*/}
+      <div className="bg-red-900 row-span-1">location</div>
       <div className="bg-blue-900 row-span-4 lg:hidden">details</div>
       <div className="h-auto bg-green-900 row-span-5 grid auto-rows-[25%] lg:hidden overflow-scroll">
         <div>test</div>
@@ -41,7 +42,7 @@ function App() {
         <div>test</div>
         <div>test</div>
       </div>
-      <div className="bg-red-900 row-span-1">location</div>
+      
     </div>
   );
 }
