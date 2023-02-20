@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/i2p-weathers/static/css/main.8c6047c5.css",
-    "main.js": "/i2p-weathers/static/js/main.7764343e.js",
+    "main.css": "/i2p-weathers/static/css/main.893da42f.css",
+    "main.js": "/i2p-weathers/static/js/main.f7368ea7.js",
     "static/js/787.7f9a0e5d.chunk.js": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js",
     "index.html": "/i2p-weathers/index.html",
-    "main.8c6047c5.css.map": "/i2p-weathers/static/css/main.8c6047c5.css.map",
-    "main.7764343e.js.map": "/i2p-weathers/static/js/main.7764343e.js.map",
+    "main.893da42f.css.map": "/i2p-weathers/static/css/main.893da42f.css.map",
+    "main.f7368ea7.js.map": "/i2p-weathers/static/js/main.f7368ea7.js.map",
     "787.7f9a0e5d.chunk.js.map": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c6047c5.css",
-    "static/js/main.7764343e.js"
+    "static/css/main.893da42f.css",
+    "static/js/main.f7368ea7.js"
   ]
 }
