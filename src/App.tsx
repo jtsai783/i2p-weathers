@@ -8,8 +8,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path={`/${process.env.PUBLIC_URL}/`} element={<InformationPage />} />
-        <Route path={`/${process.env.PUBLIC_URL}/bleh`} element={<SearchPage />} />
+        <Route path={`/`} element={<InformationPage />} />
+        <Route path={`/bleh`} element={<SearchPage />} />
       </Routes>
     </div>
   );

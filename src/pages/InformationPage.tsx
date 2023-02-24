@@ -17,7 +17,7 @@ function InformationPage() {
         })`
       }}
     >
-      <Link to="/bleh" className="row-span-1"><div className="bg-red-900 ">location</div></Link>
+      <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
         <div className="
           bg-white/[0.4] row-span-4 lg:hidden rounded-3xl mx-3 p-3
