@@ -28,5 +28,3 @@ export interface MappedWeatherData {
   shortForecast: string,
   rainChance?: number,
 }
-
-export type MappedWeatherDataShort = Omit<MappedWeatherData, "windDirection" | "windSpeed" | "humidity" | "shortForecast" | "rainChance">;

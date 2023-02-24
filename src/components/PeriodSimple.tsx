@@ -17,7 +17,7 @@ function PeriodSimple({weather: {month = 1, day = 1, isDayTime = true, temp = 99
           <div className="
             text-[3vh] font-bold
           ">
-          {`${month + 1}/${day}`}
+          {`${month}/${day}`}
           </div>
           <div className="
             text-[2vh]

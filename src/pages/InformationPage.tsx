@@ -39,7 +39,7 @@ function InformationPage() {
         </div>
         <div className="
           h-auto row-span-5
-          grid auto-rows-[25%] gap-3 grid-cols-2
+          grid auto-rows-[25%] gap-3 sm:grid-cols-2
           lg:hidden overflow-scroll
           mx-3
         ">
