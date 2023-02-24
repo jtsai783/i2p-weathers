@@ -7,12 +7,9 @@ import SearchPage from './pages/SearchPage';
 function App() {
   return (
     <div>
-      <div>
-      osijosdiaosdijoasodijaosdj
-      </div>
       <Routes>
-        <Route path="/forecast" element={<InformationPage />} />
-        <Route path="/" element={<SearchPage />} />
+        <Route path={`/${process.env.PUBLIC_URL}/forecast`} element={<InformationPage />} />
+        <Route path={`/${process.env.PUBLIC_URL}/`} element={<SearchPage />} />
       </Routes>
     </div>
   );
