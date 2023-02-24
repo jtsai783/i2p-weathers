@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
 import { Weathers } from '../interfaces/WeatherEnums'
-import { PeriodData } from '../interfaces/WeatherInterfaces'
+import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 import { MapPeriodData } from '../helpers/WeatherDataMapper'
 
 function InformationPage() {
@@ -17,7 +17,7 @@ function InformationPage() {
   useEffect(()=>{
     axios.get('https://api.weather.gov/gridpoints/TOP/31,80/forecast')
     .then((resp)=>{
-      setWeathers(resp.data.properties.periods);
+      setWeathers(resp.data.properties.periods.map(MapPeriodData));
     })
   }, [])
 
@@ -34,8 +34,8 @@ function InformationPage() {
     >
       <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
-        <div className="row-span-4 mx-3 lg:hidden bg-white/[0.4] rounded-3xl p-6">
-          <PeriodDetail />
+        <div className="row-span-4 mx-3 lg:hidden bg-black/[0.4] rounded-3xl p-6">
+          { weathers.length ? <PeriodDetail weather={weathers[periodSelected]}/> : null }
         </div>
         <div className="
           h-auto row-span-5
@@ -44,9 +44,8 @@ function InformationPage() {
           mx-3
         ">
           {
-            weathers.map((weather: PeriodData)=>{
-              const {month, day, isDayTime, temp, weatherType} = MapPeriodData(weather);
-              return(<PeriodSimple day={`${month}/${day}`} isDayTime={isDayTime} temp={temp} weather={weatherType}/>)
+            weathers.map((weather: MappedWeatherData, i: number)=>{
+              return(<PeriodSimple weather={weather} key={i}/>)
             })
           }
         </div>
@@ -54,7 +53,7 @@ function InformationPage() {
           hidden lg:grid row-span-11 auto-cols-[30%]
           grid-flow-col overflow-scroll gap-3
         ">
-          <div className="
+{/*          <div className="
             bg-white/[0.4] rounded-3xl p-3
             grid grid-rows-2
           ">
@@ -90,7 +89,7 @@ function InformationPage() {
             bg-white/[0.4] rounded-3xl">
             <PeriodDetail />
             <PeriodDetail />
-          </div>
+          </div>*/}
       </div>
     </div>
   );

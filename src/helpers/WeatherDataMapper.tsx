@@ -11,7 +11,9 @@ export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
       weatherType: Weathers.Unknown,
       windSpeed: '',
       windDirection: Directions.N,
-      humidity: 0
+      humidity: 0,
+      shortForecast: '',
+      rainChance: 0
     }
 
     let date = parseISO(periodData.startTime);
@@ -37,6 +39,8 @@ export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
     mappedData.windSpeed = periodData.windSpeed;
     mappedData.windDirection = periodData.windDirection as Directions;
     mappedData.humidity = periodData.relativeHumidity.value;
+    mappedData.shortForecast = periodData.shortForecast;
+    mappedData.rainChance = periodData.probabilityOfPrecipitation.value;
 
     return mappedData;
 }

@@ -1,19 +1,12 @@
 import React from 'react';
 import WeatherIcon from './WeatherIcon'
 import { Weathers } from '../interfaces/WeatherEnums'
+import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 
-interface PeriodSimpleProps {
-  day: string,
-  isDayTime: boolean,
-  temp: number,
-  weather: Weathers
-}
-
-
-function PeriodSimple({day = '1/1', isDayTime = true, temp = 99, weather = Weathers.Unknown}: PeriodSimpleProps) {
+function PeriodSimple({weather: {month = 1, day = 1, isDayTime = true, temp = 99, weatherType = Weathers.Unknown}}: {weather: Partial<MappedWeatherData>}) {
   return (
       <div className="
-        flex items-center justify-evenly bg-white/[0.4] rounded-3xl
+        flex items-center justify-evenly bg-black/[0.4] rounded-3xl
       ">
           <div className="
           text-slate-50 text-[3vh]
@@ -24,7 +17,7 @@ function PeriodSimple({day = '1/1', isDayTime = true, temp = 99, weather = Weath
           <div className="
             text-[3vh] font-bold
           ">
-          {day}
+          {`${month + 1}/${day}`}
           </div>
           <div className="
             text-[2vh]
@@ -35,7 +28,7 @@ function PeriodSimple({day = '1/1', isDayTime = true, temp = 99, weather = Weath
         <div className="
           flex flex-row items-center
         ">
-          <WeatherIcon weather={weather} />
+          <WeatherIcon weather={weatherType} />
           <span className="text-slate-50 text-[5vh] font-bold">{`${temp}\u00b0`}</span>
         </div>
         
