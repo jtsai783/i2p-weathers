@@ -20,7 +20,7 @@ function InformationPage() {
     >
       <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
-        <div className="row-span-4 mx-3 lg:hidden bg-white/[0.4] rounded-3xl p-3">
+        <div className="row-span-4 mx-3 lg:hidden bg-white/[0.4] rounded-3xl p-6">
           <PeriodDetail />
         </div>
         <div className="
@@ -38,36 +38,38 @@ function InformationPage() {
           <DaySimple />
         </div>
         <div className="
-          opacity-70 hidden lg:grid row-span-11 auto-cols-[30%] bg-teal-900
-          grid-flow-col overflow-scroll
+          opacity-70 hidden lg:grid row-span-11 auto-cols-[30%]
+          grid-flow-col overflow-scroll gap-3
         ">
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3
+            grid grid-rows-2
+          ">
             <PeriodDetail />
             <PeriodDetail />
           </div>
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3">
             <PeriodDetail />
             <PeriodDetail />
           </div>
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3">
             <PeriodDetail />
             <PeriodDetail />
           </div>
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3">
             <PeriodDetail />
             <PeriodDetail />
           </div>
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3">
             <PeriodDetail />
             <PeriodDetail />
           </div>
           <div className="
-            bg-white/[0.4] rounded-3xl">
+            bg-white/[0.4] rounded-3xl p-3">
             <PeriodDetail />
             <PeriodDetail />
           </div>

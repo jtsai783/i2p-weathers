@@ -9,20 +9,21 @@ import { ReactComponent as Ufo } from '../assets/icons/ufo.svg'
 import { Weathers } from '../interfaces/WeatherEnums'
 
 interface IconProps {
-  weather: Weathers
+  weather: Weathers,
+  size?: number
 }
 
-function WeatherIcon(props: IconProps) {
+function WeatherIcon({weather, size = 6.5}: IconProps) {
   return (
       <div>
         {
-          props.weather === Weathers.Night ? <Moon className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Day ? <Sun className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.CloudDay ? <CloudSun className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.CloudNight ? <CloudMoon className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Rain ? <Rain className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Snow ? <Snow className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
-          : <Ufo className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          weather === Weathers.Night ? <Moon className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : weather === Weathers.Day ? <Sun className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : weather === Weathers.CloudDay ? <CloudSun className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : weather === Weathers.CloudNight ? <CloudMoon className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : weather === Weathers.Rain ? <Rain className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : weather === Weathers.Snow ? <Snow className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
+          : <Ufo className="w-auto text-slate-50 mr-[1vh]"/>
         }
       </div>
   );
