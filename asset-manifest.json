@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/i2p-weathers/static/css/main.dd44fca9.css",
-    "main.js": "/i2p-weathers/static/js/main.ef48021a.js",
+    "main.css": "/i2p-weathers/static/css/main.69cb5615.css",
+    "main.js": "/i2p-weathers/static/js/main.8f6278e1.js",
     "static/js/787.7f9a0e5d.chunk.js": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js",
     "static/media/day.png": "/i2p-weathers/static/media/day.549ce466382b9e3c116d.png",
     "static/media/night.jpeg": "/i2p-weathers/static/media/night.c3785774de844133e34e.jpeg",
@@ -33,19 +33,24 @@
     "static/media/roboto-vietnamese-400-normal.woff2": "/i2p-weathers/static/media/roboto-vietnamese-400-normal.3230f9b040f3c630e0c3.woff2",
     "static/media/roboto-vietnamese-700-normal.woff2": "/i2p-weathers/static/media/roboto-vietnamese-700-normal.3425a701027d0699e369.woff2",
     "static/media/roboto-vietnamese-300-normal.woff2": "/i2p-weathers/static/media/roboto-vietnamese-300-normal.32fc45a3d1e8ea11fabc.woff2",
+    "static/media/Snow_1.svg": "/i2p-weathers/static/media/Snow_1.713e288b09d588d5f60204aa2e49c028.svg",
+    "static/media/ufo.svg": "/i2p-weathers/static/media/ufo.f02fe51dd27db5641fb410f7c9216fdf.svg",
+    "static/media/Rain_Medium.svg": "/i2p-weathers/static/media/Rain_Medium.dd210a8d7c2b97a0a8412e27689fd97b.svg",
+    "static/media/Cloud_Sun.svg": "/i2p-weathers/static/media/Cloud_Sun.2c430799545c582e8e1c24500493314f.svg",
     "static/media/Sun.svg": "/i2p-weathers/static/media/Sun.ccc85c6487304bc9e8cb2b4d091d65a3.svg",
+    "static/media/Cloud_Moon.svg": "/i2p-weathers/static/media/Cloud_Moon.2bd20cd1c3aaff00c30918bc9a9e2330.svg",
     "static/media/roboto-greek-ext-500-normal.woff2": "/i2p-weathers/static/media/roboto-greek-ext-500-normal.6fb9cffb1d3e72bf9293.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/i2p-weathers/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "static/media/roboto-greek-ext-300-normal.woff2": "/i2p-weathers/static/media/roboto-greek-ext-300-normal.35b9d6be04b95f0f0530.woff2",
     "static/media/roboto-greek-ext-700-normal.woff2": "/i2p-weathers/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "static/media/Moon.svg": "/i2p-weathers/static/media/Moon.c5da8aa07c5465da90ee8f3069c4f7e8.svg",
     "index.html": "/i2p-weathers/index.html",
-    "main.dd44fca9.css.map": "/i2p-weathers/static/css/main.dd44fca9.css.map",
-    "main.ef48021a.js.map": "/i2p-weathers/static/js/main.ef48021a.js.map",
+    "main.69cb5615.css.map": "/i2p-weathers/static/css/main.69cb5615.css.map",
+    "main.8f6278e1.js.map": "/i2p-weathers/static/js/main.8f6278e1.js.map",
     "787.7f9a0e5d.chunk.js.map": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd44fca9.css",
-    "static/js/main.ef48021a.js"
+    "static/css/main.69cb5615.css",
+    "static/js/main.8f6278e1.js"
   ]
 }
