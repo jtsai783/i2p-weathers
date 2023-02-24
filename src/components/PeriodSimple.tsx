@@ -3,10 +3,10 @@ import WeatherIcon from './WeatherIcon'
 import { Weathers } from '../interfaces/WeatherEnums'
 
 interface PeriodSimpleProps {
-  day?: string,
-  isDayTime?: boolean,
-  temp?: number,
-  weather?: Weathers
+  day: string,
+  isDayTime: boolean,
+  temp: number,
+  weather: Weathers
 }
 
 

@@ -3,7 +3,7 @@ import WeatherIcon from './WeatherIcon'
 import { Directions, Weathers } from '../interfaces/WeatherEnums'
 
 
-interface PeriodDetail {
+interface PeriodDetailProps {
   temp: number,
   rainChance: number,
   humidity: number,

@@ -5,7 +5,15 @@ export interface PeriodData {
   startTime: string,
   isDaytime: boolean,
   temperature: number,
-  shortForecast: string
+  shortForecast: string,
+  probabilityOfPrecipitation: {
+    value: number
+  },
+  relativeHumidity: {
+    value: number
+  },
+  windSpeed: string,
+  windDirection: string,
 }
 
 export interface MappedWeatherData {
@@ -14,7 +22,7 @@ export interface MappedWeatherData {
   isDayTime: boolean,
   temp: number,
   weatherType: Weathers,
-  windDirection?: Directions,
-  windSpeed?: number,
-  humidity?: number
+  windDirection: Directions,
+  windSpeed: string,
+  humidity: number
 }

@@ -10,8 +10,6 @@ import { Weathers } from '../interfaces/WeatherEnums'
 import { PeriodData } from '../interfaces/WeatherInterfaces'
 import { MapPeriodData } from '../helpers/WeatherDataMapper'
 
-
-
 function InformationPage() {
   const [weathers, setWeathers] = useState([]);
   const [periodSelected, setPeriodSelected] = useState(0);
@@ -46,7 +44,7 @@ function InformationPage() {
           mx-3
         ">
           {
-            weathers.map((weather: PeriodData, i: number)=>{
+            weathers.map((weather: PeriodData)=>{
               const {month, day, isDayTime, temp, weatherType} = MapPeriodData(weather);
               return(<PeriodSimple day={`${month}/${day}`} isDayTime={isDayTime} temp={temp} weather={weatherType}/>)
             })

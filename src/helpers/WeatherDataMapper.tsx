@@ -1,14 +1,17 @@
 import { PeriodData, MappedWeatherData } from '../interfaces/WeatherInterfaces'
-import { Weathers } from '../interfaces/WeatherEnums'
+import { Weathers, Directions } from '../interfaces/WeatherEnums'
 import { getDate, getMonth, parseISO, subDays } from 'date-fns'
 
 export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
-    const mappedData = {
+    const mappedData: MappedWeatherData = {
       month: 0,
       day: 0,
       isDayTime: false,
       temp: 0,
       weatherType: Weathers.Unknown,
+      windSpeed: '',
+      windDirection: Directions.N,
+      humidity: 0
     }
 
     let date = parseISO(periodData.startTime);
@@ -31,6 +34,9 @@ export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
     } else if(periodData.shortForecast.toLowerCase().indexOf('snow') !== -1){
       mappedData.weatherType = Weathers.Snow;
     }
+    mappedData.windSpeed = periodData.windSpeed;
+    mappedData.windDirection = periodData.windDirection as Directions;
+    mappedData.humidity = periodData.relativeHumidity.value;
 
     return mappedData;
 }
