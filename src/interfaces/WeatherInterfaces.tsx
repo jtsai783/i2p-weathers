@@ -6,6 +6,7 @@ export interface PeriodData {
   isDaytime: boolean,
   temperature: number,
   shortForecast: string,
+  detailedForecast: string,
   probabilityOfPrecipitation: {
     value: number
   },
@@ -26,5 +27,6 @@ export interface MappedWeatherData {
   windSpeed: string,
   humidity: number,
   shortForecast: string,
+  longForecast: string,
   rainChance?: number,
 }

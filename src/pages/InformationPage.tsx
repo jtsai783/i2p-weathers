@@ -45,7 +45,7 @@ function InformationPage() {
         ">
           {
             weathers.map((weather: MappedWeatherData, i: number)=>{
-              return(<PeriodSimple weather={weather} key={i}/>)
+              return(<PeriodSimple weather={weather} key={i} onClick={()=>{setPeriodSelected(i)}}/>)
             })
           }
         </div>

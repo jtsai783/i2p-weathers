@@ -13,6 +13,7 @@ export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
       windDirection: Directions.N,
       humidity: 0,
       shortForecast: '',
+      longForecast: '',
       rainChance: 0
     }
 
@@ -25,21 +26,23 @@ export function MapPeriodData(periodData: PeriodData): MappedWeatherData {
     mappedData.isDayTime = periodData.isDaytime;
     mappedData.temp = periodData.temperature;
     mappedData.weatherType = mappedData.isDayTime ? Weathers.Day : Weathers.Night;
-    if(periodData.shortForecast.toLowerCase().indexOf('cloud') !== -1){
+    if(periodData.detailedForecast.toLowerCase().indexOf('snow') !== -1){
+      mappedData.weatherType = Weathers.Snow;
+    }else if(periodData.detailedForecast.toLowerCase().indexOf('rain') !== -1 ||
+       periodData.detailedForecast.toLowerCase().indexOf('shower') !== -1){
+      mappedData.weatherType = Weathers.Rain;
+    }else if(periodData.detailedForecast.toLowerCase().indexOf('cloud') !== -1){
       if(mappedData.isDayTime){
         mappedData.weatherType = Weathers.CloudDay;
       } else {
         mappedData.weatherType = Weathers.CloudNight;
       }
-    } else if(periodData.shortForecast.toLowerCase().indexOf('rain') !== -1){
-      mappedData.weatherType = Weathers.Rain;
-    } else if(periodData.shortForecast.toLowerCase().indexOf('snow') !== -1){
-      mappedData.weatherType = Weathers.Snow;
     }
     mappedData.windSpeed = periodData.windSpeed;
     mappedData.windDirection = periodData.windDirection as Directions;
     mappedData.humidity = periodData.relativeHumidity.value;
     mappedData.shortForecast = periodData.shortForecast;
+    mappedData.longForecast = periodData.detailedForecast;
     mappedData.rainChance = periodData.probabilityOfPrecipitation.value;
 
     return mappedData;

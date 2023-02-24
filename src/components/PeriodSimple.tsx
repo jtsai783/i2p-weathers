@@ -3,11 +3,13 @@ import WeatherIcon from './WeatherIcon'
 import { Weathers } from '../interfaces/WeatherEnums'
 import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 
-function PeriodSimple({weather: {month = 1, day = 1, isDayTime = true, temp = 99, weatherType = Weathers.Unknown}}: {weather: Partial<MappedWeatherData>}) {
+function PeriodSimple({weather: {month = 1, day = 1, isDayTime = true, temp = 99, weatherType = Weathers.Unknown}, onClick}: {weather: Partial<MappedWeatherData>, onClick: ()=>void}) {
   return (
       <div className="
         flex items-center justify-evenly bg-black/[0.4] rounded-3xl
-      ">
+      "
+      onClick={onClick}
+      >
           <div className="
           text-slate-50 text-[3vh]
           flex flex-col justify-center items-center

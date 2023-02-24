@@ -3,10 +3,10 @@ import WeatherIcon from './WeatherIcon'
 import { Directions, Weathers } from '../interfaces/WeatherEnums'
 import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 
-function PeriodDetail({weather: {shortForecast, windDirection, weatherType, day, month, isDayTime, temp = 99, rainChance = 99, humidity = 99, windSpeed = ''}}: {weather: MappedWeatherData}) {
+function PeriodDetail({weather: {shortForecast, longForecast, windDirection, weatherType, day, month, isDayTime, temp = 99, rainChance = 99, humidity = 99, windSpeed = ''}}: {weather: MappedWeatherData}) {
   return (
       <div className="
-        flex flex-col sm:flex-row gap-3 h-full items-center lg:items-start lg:flex-col justify-evenly
+        flex flex-col sm:flex-row gap-3 h-full items-center lg:items-start lg:flex-col justify-evenly sm:justify-start
       ">
         <div className="
           flex flex-col items-center gap-2
@@ -41,9 +41,14 @@ function PeriodDetail({weather: {shortForecast, windDirection, weatherType, day,
             <div>{humidity}%</div>
           </div>  
         </div>
-        <div className="text-[4vh] text-slate-50 font-bold
+        <div className="text-[3vh] text-slate-50 font-bold sm:hidden
         ">
           {shortForecast}
+        </div>
+
+        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block
+        ">
+          {longForecast}
         </div>
       </div>
   );
