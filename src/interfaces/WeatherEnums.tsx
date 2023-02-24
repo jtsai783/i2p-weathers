@@ -8,21 +8,21 @@ export enum Weathers {
 	Unknown
 }
 
-export enum Headings {
-	N,
-	NNE,
-	NE,
-	ENE,
-	E,
-	ESE,
-	SE,
-	SSE,
-	S,
-	SSW,
-	SW,
-	WSW,
-	W,
-	NWN,
-	NW,
-	NNW
+export enum Directions {
+	N = 'N',
+	NNE = 'NNE',
+	NE = 'NE',
+	ENE = 'ENE',
+	E = 'E',
+	ESE = 'ESE',
+	SE = 'SE',
+	SSE = 'SSE',
+	S = 'S',
+	SSW = 'SSW',
+	SW = 'SW',
+	WSW = 'WSW',
+	W = 'W',
+	NWN = 'NWN',
+	NW = 'NW',
+	NNW = 'NNW'
 }

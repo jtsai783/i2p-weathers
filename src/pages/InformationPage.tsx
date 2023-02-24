@@ -20,7 +20,9 @@ function InformationPage() {
     >
       <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
-        <PeriodDetail />
+        <div className="row-span-4 mx-3 lg:hidden bg-white/[0.4] rounded-3xl p-3">
+          <PeriodDetail />
+        </div>
         <div className="
           h-auto row-span-5
           grid auto-rows-[25%] gap-3
@@ -39,13 +41,41 @@ function InformationPage() {
           opacity-70 hidden lg:grid row-span-11 auto-cols-[30%] bg-teal-900
           grid-flow-col overflow-scroll
         ">
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
-          <div>test</div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
+          <div className="
+            bg-white/[0.4] rounded-3xl">
+            <PeriodDetail />
+            <PeriodDetail />
+          </div>
       </div>
     </div>
   );

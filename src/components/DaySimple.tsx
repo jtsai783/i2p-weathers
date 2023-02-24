@@ -10,18 +10,18 @@ function DaySimple() {
     >
       <div className="
         text-slate-50 text-[3vh]
-        flex flex-col justify-end items-start
+        flex flex-col justify-center items-center
         col-span-1
         border-slate-300 border-solid border-0 border-r-2
       ">
         <div className="
-          text-[4vh]
+          text-[3vh] font-bold
         ">5/12
         </div>
         <div className="
-          text-[2.5vh]
+          text-[2vh]
         ">
-          2023
+          WED
         </div>
       </div>
       <PeriodSimple />

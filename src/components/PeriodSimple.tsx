@@ -7,10 +7,10 @@ function PeriodSimple() {
       <div className="
         border-slate-300 border-solid border-0 border-r-2 last:border-0
         col-span-2
-        flex items-center
+        flex items-center justify-center
       ">
-        <WeatherIcon weather={Weathers.Unknown} />
-        <span className="text-slate-50 text-[6vh] align-middle">{'30\u00b0'}</span>
+        <WeatherIcon weather={Weathers.Day} />
+        <span className="text-slate-50 text-[5vh] font-bold">{'30\u00b0'}</span>
       </div>
   );
 }

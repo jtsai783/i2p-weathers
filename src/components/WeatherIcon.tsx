@@ -16,13 +16,13 @@ function WeatherIcon(props: IconProps) {
   return (
       <div>
         {
-          props.weather === Weathers.Night ? <Moon className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Day ? <Sun className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.CloudDay ? <CloudSun className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.CloudNight ? <CloudMoon className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Rain ? <Rain className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : props.weather === Weathers.Snow ? <Snow className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
-          : <Ufo className="h-[7vh] w-auto text-slate-50 mr-[1vh]"/>
+          props.weather === Weathers.Night ? <Moon className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : props.weather === Weathers.Day ? <Sun className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : props.weather === Weathers.CloudDay ? <CloudSun className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : props.weather === Weathers.CloudNight ? <CloudMoon className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : props.weather === Weathers.Rain ? <Rain className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : props.weather === Weathers.Snow ? <Snow className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
+          : <Ufo className="h-[6.5vh] w-auto text-slate-50 mr-[1vh]"/>
         }
       </div>
   );
