@@ -7,6 +7,9 @@ import SearchPage from './pages/SearchPage';
 function App() {
   return (
     <div>
+      <div>
+      osijosdiaosdijoasodijaosdj
+      </div>
       <Routes>
         <Route path="/forecast" element={<InformationPage />} />
         <Route path="/" element={<SearchPage />} />
