@@ -6,7 +6,6 @@ import PeriodSimple from '../components/PeriodSimple'
 import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
-import { Weathers } from '../interfaces/WeatherEnums'
 import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 import { MapPeriodData } from '../helpers/WeatherDataMapper'
 
@@ -35,7 +34,7 @@ function InformationPage() {
       <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
         <div className="row-span-4 mx-3 lg:hidden bg-black/[0.4] rounded-3xl p-6">
-          { weathers.length ? <PeriodDetail weather={weathers[periodSelected]}/> : null }
+          { weathers.length ? <PeriodDetail weather={weathers[periodSelected]} key="cta"/> : null }
         </div>
         <div className="
           h-auto row-span-5
@@ -47,7 +46,7 @@ function InformationPage() {
         >
         <div className="
           grid auto-rows-[25%] gap-3 sm:grid-cols-2
-          m-3 h-full
+          my-3 h-full
         ">
           {
             weathers.map((weather: MappedWeatherData, i: number)=>{
@@ -57,46 +56,18 @@ function InformationPage() {
         </div>
         </div>
         <div className="
-          hidden lg:grid row-span-11 auto-cols-[30%]
+          hidden lg:grid row-span-11 auto-cols-[30%] grid-rows-2
           grid-flow-col overflow-scroll gap-3
         ">
-{/*          <div className="
-            bg-white/[0.4] rounded-3xl p-3
-            grid grid-rows-2
-          ">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl p-3">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl p-3">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl p-3">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl p-3">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl p-3">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>
-          <div className="
-            bg-white/[0.4] rounded-3xl">
-            <PeriodDetail />
-            <PeriodDetail />
-          </div>*/}
+        {
+          weathers.map((weather: MappedWeatherData, i: number)=>{
+            return(
+              <div className="bg-black/[0.4] rounded-3xl p-6" key={`detail-${i}`}>
+                <PeriodDetail weather={weathers[i]} />
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   );

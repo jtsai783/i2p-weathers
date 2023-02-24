@@ -1,6 +1,5 @@
 import React from 'react';
 import WeatherIcon from './WeatherIcon'
-import { Directions, Weathers } from '../interfaces/WeatherEnums'
 import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 
 function PeriodDetail({weather: {shortForecast, longForecast, windDirection, weatherType, day, month, isDayTime, temp = 99, rainChance = 99, humidity = 99, windSpeed = ''}}: {weather: MappedWeatherData}) {
@@ -46,7 +45,7 @@ function PeriodDetail({weather: {shortForecast, longForecast, windDirection, wea
           {shortForecast}
         </div>
 
-        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block
+        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block overflow-scroll
         ">
           {longForecast}
         </div>
