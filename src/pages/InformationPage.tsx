@@ -6,7 +6,7 @@ import PeriodSimple from '../components/PeriodSimple'
 import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
-import { getDate, getMonth, parseISO } from 'date-fns'
+import { getDate, getMonth, parseISO, subDays } from 'date-fns'
 import { Weathers } from '../interfaces/WeatherEnums'
 
 interface PeriodData {
@@ -50,9 +50,13 @@ function InformationPage() {
           mx-3
         ">
           {
-            weathers.map((weather: PeriodData)=>{
-              let day = getDate(parseISO(weather.startTime));
-              let month = getMonth(parseISO(weather.startTime)) + 1;
+            weathers.map((weather: PeriodData, i: number)=>{
+              let date = parseISO(weather.startTime);
+              if( i === 0 && !weather.isDaytime){
+                date = subDays(date, 1);
+              }
+              let day = getDate(date);
+              let month = getMonth(date) + 1;
               let isDayTime = weather.isDaytime;
               let temp = weather.temperature;
               let weatherType = isDayTime ? Weathers.Day : Weathers.Night;
@@ -71,20 +75,6 @@ function InformationPage() {
               return(<PeriodSimple day={`${month}/${day}`} isDayTime={isDayTime} temp={temp} weather={weatherType}/>)
             })
           }
-{/*          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />*/}
         </div>
         <div className="
           hidden lg:grid row-span-11 auto-cols-[30%]
