@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/i2p-weathers">
       <App />
     </BrowserRouter>
   </React.StrictMode>
