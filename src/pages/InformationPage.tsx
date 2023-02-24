@@ -6,15 +6,11 @@ import PeriodSimple from '../components/PeriodSimple'
 import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
-import { getDate, getMonth, parseISO, subDays } from 'date-fns'
 import { Weathers } from '../interfaces/WeatherEnums'
+import { PeriodData } from '../interfaces/WeatherInterfaces'
+import { MapPeriodData } from '../helpers/WeatherDataMapper'
 
-interface PeriodData {
-  startTime: string,
-  isDaytime: boolean,
-  temperature: number,
-  shortForecast: string
-}
+
 
 function InformationPage() {
   const [weathers, setWeathers] = useState([]);
@@ -51,27 +47,7 @@ function InformationPage() {
         ">
           {
             weathers.map((weather: PeriodData, i: number)=>{
-              let date = parseISO(weather.startTime);
-              if( i === 0 && !weather.isDaytime){
-                date = subDays(date, 1);
-              }
-              let day = getDate(date);
-              let month = getMonth(date) + 1;
-              let isDayTime = weather.isDaytime;
-              let temp = weather.temperature;
-              let weatherType = isDayTime ? Weathers.Day : Weathers.Night;
-              if(weather.shortForecast.toLowerCase().indexOf('cloud') !== -1){
-                if(isDayTime){
-                  weatherType = Weathers.CloudDay;
-                } else {
-                  weatherType = Weathers.CloudNight;
-                }
-              } else if(weather.shortForecast.toLowerCase().indexOf('rain') !== -1){
-                weatherType = Weathers.Rain;
-              } else if(weather.shortForecast.toLowerCase().indexOf('snow') !== -1){
-                weatherType = Weathers.Snow;
-              }
-
+              const {month, day, isDayTime, temp, weatherType} = MapPeriodData(weather);
               return(<PeriodSimple day={`${month}/${day}`} isDayTime={isDayTime} temp={temp} weather={weatherType}/>)
             })
           }
