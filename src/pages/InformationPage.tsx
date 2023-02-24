@@ -2,8 +2,9 @@ import React from 'react';
 import dayBg from '../assets/backgroundImages/day.png'
 import nightBg from '../assets/backgroundImages/night.jpeg'
 import { getHours } from 'date-fns'
-import SmallView from '../components/SmallView'
+import DaySimple from '../components/DaySimple'
 import { Link } from 'react-router-dom'
+import PeriodDetail from '../components/PeriodDetail'
 
 function InformationPage() {
   return (
@@ -19,24 +20,20 @@ function InformationPage() {
     >
       <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
 
-        <div className="
-          bg-white/[0.4] row-span-4 lg:hidden rounded-3xl mx-3 p-3
-        ">
-          details
-        </div>
+        <PeriodDetail />
         <div className="
           h-auto row-span-5
           grid auto-rows-[25%] gap-3
           lg:hidden overflow-scroll
           mx-3
         ">
-          <SmallView />
-          <SmallView />
-          <SmallView />
-          <SmallView />
-          <SmallView />
-          <SmallView />
-          <SmallView />
+          <DaySimple />
+          <DaySimple />
+          <DaySimple />
+          <DaySimple />
+          <DaySimple />
+          <DaySimple />
+          <DaySimple />
         </div>
         <div className="
           opacity-70 hidden lg:grid row-span-11 auto-cols-[30%] bg-teal-900

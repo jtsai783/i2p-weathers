@@ -8,8 +8,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path={`/`} element={<InformationPage />} />
-        <Route path={`/bleh`} element={<SearchPage />} />
+        <Route path={`/forecast`} element={<InformationPage />} />
+        <Route path={`/`} element={<SearchPage />} />
       </Routes>
     </div>
   );
