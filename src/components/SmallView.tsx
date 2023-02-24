@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as SunLogo } from '../assets/icons/Sun.svg'
+import { ReactComponent as MoonLogo } from '../assets/icons/Moon.svg'
 
 function SmallView() {
   return (
@@ -11,10 +12,16 @@ function SmallView() {
       <div className="
         border-slate-300 border-solid border-0 border-r-2
       ">
-        <SunLogo className="h-full text-slate-50"/>
+        <SunLogo className="
+          h-full w-auto
+          text-slate-50
+        "/>
       </div>
       <div>
-      night
+        <MoonLogo className="
+          h-full w-auto
+          text-slate-50
+        "/>
       </div>
     </div>
   );
