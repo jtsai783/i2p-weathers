@@ -39,15 +39,22 @@ function InformationPage() {
         </div>
         <div className="
           h-auto row-span-5
+          lg:hidden overflow-scroll p-3
+        "
+          style={{
+            boxShadow: '0px 10px 5px -5px rgb(0 0 0 / 69%) inset',
+          }}
+        >
+        <div className="
           grid auto-rows-[25%] gap-3 sm:grid-cols-2
-          lg:hidden overflow-scroll
-          mx-3
+          m-3 h-full
         ">
           {
             weathers.map((weather: MappedWeatherData, i: number)=>{
               return(<PeriodSimple weather={weather} key={i} onClick={()=>{setPeriodSelected(i)}}/>)
             })
           }
+        </div>
         </div>
         <div className="
           hidden lg:grid row-span-11 auto-cols-[30%]
