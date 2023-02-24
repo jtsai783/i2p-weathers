@@ -3,6 +3,7 @@ import dayBg from '../assets/backgroundImages/day.png'
 import nightBg from '../assets/backgroundImages/night.jpeg'
 import { getHours } from 'date-fns'
 import SmallView from '../components/SmallView'
+import { Link } from 'react-router-dom'
 
 function InformationPage() {
   return (
@@ -16,7 +17,7 @@ function InformationPage() {
         })`
       }}
     >
-      <div className="bg-red-900 row-span-1">location</div>
+      <Link to="/bleh" className="row-span-1"><div className="bg-red-900 ">location</div></Link>
 
         <div className="
           bg-white/[0.4] row-span-4 lg:hidden rounded-3xl mx-3 p-3
