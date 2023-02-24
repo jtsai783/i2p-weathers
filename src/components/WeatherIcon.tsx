@@ -23,7 +23,7 @@ function WeatherIcon({weather, size = 6.5}: IconProps) {
           : weather === Weathers.CloudNight ? <CloudMoon className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
           : weather === Weathers.Rain ? <Rain className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
           : weather === Weathers.Snow ? <Snow className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
-          : <Ufo className="w-auto text-slate-50 mr-[1vh]"/>
+          : <Ufo className="w-auto text-slate-50 mr-[1vh]" style={{height: `${size}vh`}}/>
         }
       </div>
   );

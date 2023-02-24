@@ -2,10 +2,18 @@ import React from 'react';
 import WeatherIcon from './WeatherIcon'
 import { Weathers } from '../interfaces/WeatherEnums'
 
-function PeriodSimple() {
+interface PeriodSimpleProps {
+  day?: string,
+  isDayTime?: boolean,
+  temp?: number,
+  weather?: Weathers
+}
+
+
+function PeriodSimple({day = '1/1', isDayTime = true, temp = 99, weather = Weathers.Unknown}: PeriodSimpleProps) {
   return (
       <div className="
-        flex items-center justify-evenly
+        flex items-center justify-evenly bg-white/[0.4] rounded-3xl
       ">
           <div className="
           text-slate-50 text-[3vh]
@@ -15,19 +23,20 @@ function PeriodSimple() {
         ">
           <div className="
             text-[3vh] font-bold
-          ">5/12
+          ">
+          {day}
           </div>
           <div className="
             text-[2vh]
           ">
-            Day
+            {isDayTime ? 'Day' : 'Night'}
           </div>
         </div>
         <div className="
           flex flex-row items-center
         ">
-          <WeatherIcon weather={Weathers.Day} />
-          <span className="text-slate-50 text-[5vh] font-bold">{'30\u00b0'}</span>
+          <WeatherIcon weather={weather} />
+          <span className="text-slate-50 text-[5vh] font-bold">{`${temp}\u00b0`}</span>
         </div>
         
       </div>

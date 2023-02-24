@@ -6,11 +6,19 @@ import PeriodSimple from '../components/PeriodSimple'
 import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
+import { getDate, getMonth, parseISO } from 'date-fns'
+import { Weathers } from '../interfaces/WeatherEnums'
 
-
+interface PeriodData {
+  startTime: string,
+  isDaytime: boolean,
+  temperature: number,
+  shortForecast: string
+}
 
 function InformationPage() {
-  const [weathers, setWeathers] = useState({});
+  const [weathers, setWeathers] = useState([]);
+  const [periodSelected, setPeriodSelected] = useState(0);
 
   useEffect(()=>{
     axios.get('https://api.weather.gov/gridpoints/TOP/31,80/forecast')
@@ -41,6 +49,29 @@ function InformationPage() {
           lg:hidden overflow-scroll
           mx-3
         ">
+          {
+            weathers.map((weather: PeriodData)=>{
+              let day = getDate(parseISO(weather.startTime));
+              let month = getMonth(parseISO(weather.startTime)) + 1;
+              let isDayTime = weather.isDaytime;
+              let temp = weather.temperature;
+              let weatherType = isDayTime ? Weathers.Day : Weathers.Night;
+              if(weather.shortForecast.toLowerCase().indexOf('cloud') !== -1){
+                if(isDayTime){
+                  weatherType = Weathers.CloudDay;
+                } else {
+                  weatherType = Weathers.CloudNight;
+                }
+              } else if(weather.shortForecast.toLowerCase().indexOf('rain') !== -1){
+                weatherType = Weathers.Rain;
+              } else if(weather.shortForecast.toLowerCase().indexOf('snow') !== -1){
+                weatherType = Weathers.Snow;
+              }
+
+              return(<PeriodSimple day={`${month}/${day}`} isDayTime={isDayTime} temp={temp} weather={weatherType}/>)
+            })
+          }
+{/*          <PeriodSimple />
           <PeriodSimple />
           <PeriodSimple />
           <PeriodSimple />
@@ -53,8 +84,7 @@ function InformationPage() {
           <PeriodSimple />
           <PeriodSimple />
           <PeriodSimple />
-          <PeriodSimple />
-          <PeriodSimple />
+          <PeriodSimple />*/}
         </div>
         <div className="
           hidden lg:grid row-span-11 auto-cols-[30%]
