@@ -7,17 +7,35 @@ import { Link } from 'react-router-dom'
 import PeriodDetail from '../components/PeriodDetail'
 import axios from 'axios'
 import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
-import { MapPeriodData } from '../helpers/WeatherDataMapper'
+import { MapPeriodData } from '../helpers/WeatherDataMapper' //@ts-ignore
+import { useSelector } from 'react-redux'
+import { storeInterface } from '../store/store'
+import {useNavigate} from 'react-router-dom';
+
 
 function InformationPage() {
   const [weathers, setWeathers] = useState([]);
   const [periodSelected, setPeriodSelected] = useState(0);
+  const navigate = useNavigate();
+  const lat = useSelector((state:storeInterface) => state.location.lat);
+  const long = useSelector((state:storeInterface) => state.location.long);
+  const name = useSelector((state:storeInterface) => state.location.name);
 
   useEffect(()=>{
-    axios.get('https://api.weather.gov/gridpoints/TOP/31,80/forecast')
-    .then((resp)=>{
-      setWeathers(resp.data.properties.periods.map(MapPeriodData));
-    })
+    if(lat === '' || long === ''){
+      navigate('/');
+    } else {
+      axios.get(`https://api.weather.gov/points/${lat},${long}`)
+      .then((resp)=>{
+        axios.get(resp.data.properties.forecast)
+        .then((resp)=>{
+          setWeathers(resp.data.properties.periods.map(MapPeriodData));
+        })
+      })
+      .catch((err)=>{
+        //handle error here
+      })  
+    }
   }, [])
 
   return (
@@ -31,7 +49,11 @@ function InformationPage() {
         })`
       }}
     >
-      <Link to={`/bleh`} className="row-span-1"><div className="bg-red-900 ">location test bleh</div></Link>
+      <div className="row-span-1 flex bg-black/[0.4] justify-between items-center ">
+        <div className="text-[2vh] font-bold text-slate-50 ml-3">{name}</div>
+        <div className="text-[4vh] mr-3"><Link to="/" className="no-underline">🔍</Link></div>
+      </div>
+      
 
         <div className="row-span-4 mx-3 lg:hidden bg-black/[0.4] rounded-3xl p-6">
           { weathers.length ? <PeriodDetail weather={weathers[periodSelected]} key="cta"/> : null }
@@ -57,7 +79,7 @@ function InformationPage() {
         </div>
         <div className="
           hidden lg:grid row-span-11 auto-cols-[30%] grid-rows-2
-          grid-flow-col overflow-scroll gap-3
+          grid-flow-col overflow-scroll gap-3 my-3
         ">
         {
           weathers.map((weather: MappedWeatherData, i: number)=>{
