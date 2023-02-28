@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/i2p-weathers/static/css/main.3003566c.css",
-    "main.js": "/i2p-weathers/static/js/main.25ff022b.js",
+    "main.css": "/i2p-weathers/static/css/main.1e3e7923.css",
+    "main.js": "/i2p-weathers/static/js/main.fddf6717.js",
     "static/js/787.7f9a0e5d.chunk.js": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js",
-    "static/media/clouds.jpeg": "/i2p-weathers/static/media/clouds.ed32a6992dfbb5f77978.jpeg",
     "static/media/day.png": "/i2p-weathers/static/media/day.549ce466382b9e3c116d.png",
     "static/media/night.jpeg": "/i2p-weathers/static/media/night.c3785774de844133e34e.jpeg",
+    "static/media/clouds.jpeg": "/i2p-weathers/static/media/clouds.d5c5d042ff91fc69ac3c.jpeg",
     "static/media/roboto-all-500-normal.woff": "/i2p-weathers/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/i2p-weathers/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
     "static/media/roboto-all-400-normal.woff": "/i2p-weathers/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
@@ -46,12 +46,13 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/i2p-weathers/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "static/media/Moon.svg": "/i2p-weathers/static/media/Moon.c5da8aa07c5465da90ee8f3069c4f7e8.svg",
     "index.html": "/i2p-weathers/index.html",
-    "main.3003566c.css.map": "/i2p-weathers/static/css/main.3003566c.css.map",
-    "main.25ff022b.js.map": "/i2p-weathers/static/js/main.25ff022b.js.map",
+    "static/media/magnifyingGlass.svg": "/i2p-weathers/static/media/magnifyingGlass.0010a6d84b95b940bb539052b1e07bd0.svg",
+    "main.1e3e7923.css.map": "/i2p-weathers/static/css/main.1e3e7923.css.map",
+    "main.fddf6717.js.map": "/i2p-weathers/static/js/main.fddf6717.js.map",
     "787.7f9a0e5d.chunk.js.map": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3003566c.css",
-    "static/js/main.25ff022b.js"
+    "static/css/main.1e3e7923.css",
+    "static/js/main.fddf6717.js"
   ]
 }
