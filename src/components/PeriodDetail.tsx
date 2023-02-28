@@ -5,7 +5,7 @@ import { MappedWeatherData } from '../interfaces/WeatherInterfaces'
 function PeriodDetail({weather: {shortForecast, longForecast, windDirection, weatherType, day, month, isDayTime, temp = 99, rainChance = 99, humidity = 99, windSpeed = ''}}: {weather: MappedWeatherData}) {
   return (
       <div className="
-        flex flex-col sm:flex-row gap-3 h-full items-center lg:items-start lg:flex-col justify-evenly sm:justify-start
+        flex flex-col sm:flex-row gap-3 h-full items-center xl:items-start xl:flex-col justify-evenly sm:justify-start
       ">
         <div className="
           flex flex-col items-center gap-2
