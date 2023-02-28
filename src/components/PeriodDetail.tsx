@@ -45,7 +45,7 @@ function PeriodDetail({weather: {shortForecast, longForecast, windDirection, wea
           {shortForecast}
         </div>
 
-        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block overflow-scroll
+        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block overflow-auto
         ">
           {longForecast}
         </div>
