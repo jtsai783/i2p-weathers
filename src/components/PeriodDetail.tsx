@@ -40,12 +40,12 @@ function PeriodDetail({weather: {shortForecast, longForecast, windDirection, wea
             <div>{humidity}%</div>
           </div>  
         </div>
-        <div className="text-[3vh] text-slate-50 font-bold sm:hidden
+        <div className="text-[3vh] text-slate-50 font-bold lg:hidden
         ">
           {shortForecast}
         </div>
 
-        <div className="text-[3vh] text-slate-50 font-bold hidden sm:block overflow-auto
+        <div className="text-[3vh] text-slate-50 font-bold hidden lg:block overflow-auto
         ">
           {longForecast}
         </div>
