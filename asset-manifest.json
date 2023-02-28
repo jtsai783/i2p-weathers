@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/i2p-weathers/static/css/main.18de4f13.css",
-    "main.js": "/i2p-weathers/static/js/main.b3547c4a.js",
+    "main.css": "/i2p-weathers/static/css/main.b935e3f4.css",
+    "main.js": "/i2p-weathers/static/js/main.dca51fff.js",
     "static/js/787.7f9a0e5d.chunk.js": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js",
     "static/media/day.png": "/i2p-weathers/static/media/day.549ce466382b9e3c116d.png",
     "static/media/night.jpeg": "/i2p-weathers/static/media/night.c3785774de844133e34e.jpeg",
@@ -47,12 +47,12 @@
     "static/media/Moon.svg": "/i2p-weathers/static/media/Moon.c5da8aa07c5465da90ee8f3069c4f7e8.svg",
     "index.html": "/i2p-weathers/index.html",
     "static/media/magnifyingGlass.svg": "/i2p-weathers/static/media/magnifyingGlass.0010a6d84b95b940bb539052b1e07bd0.svg",
-    "main.18de4f13.css.map": "/i2p-weathers/static/css/main.18de4f13.css.map",
-    "main.b3547c4a.js.map": "/i2p-weathers/static/js/main.b3547c4a.js.map",
+    "main.b935e3f4.css.map": "/i2p-weathers/static/css/main.b935e3f4.css.map",
+    "main.dca51fff.js.map": "/i2p-weathers/static/js/main.dca51fff.js.map",
     "787.7f9a0e5d.chunk.js.map": "/i2p-weathers/static/js/787.7f9a0e5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18de4f13.css",
-    "static/js/main.b3547c4a.js"
+    "static/css/main.b935e3f4.css",
+    "static/js/main.dca51fff.js"
   ]
 }
